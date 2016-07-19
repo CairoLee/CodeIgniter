@@ -14,6 +14,13 @@ class ComposerStaticInit07478d198fc3d0499f102aefd1275be5
                 0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
             ),
         ),
+        'R' => 
+        array (
+            'Requests' => 
+            array (
+                0 => __DIR__ . '/..' . '/rmccue/requests/library',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
