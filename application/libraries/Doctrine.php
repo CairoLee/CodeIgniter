@@ -12,6 +12,8 @@
  * This code is based on http://doctrine-orm.readthedocs.org/en/latest/cookbook/integrating-with-codeigniter.html
  */
 
+require_once APPPATH . '../vendor/autoload.php';
+
 use Doctrine\Common\ClassLoader;
 use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
@@ -65,10 +67,10 @@ class Doctrine
 
     /**
      * Convert CodeIgniter database config array to Doctrine's
-     * 
+     *
      * See http://www.codeigniter.com/user_guide/database/configuration.html
      * See http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
-     * 
+     *
      * @param array $db
      * @return array
      * @throws Exception
