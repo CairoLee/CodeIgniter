@@ -12,7 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.2.4",
-		"rmccue/requests": "^1.6"
+		"rmccue/requests": "^1.6",
+		"kenjis/codeigniter-doctrine": "1.0.x@dev"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
