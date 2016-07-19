@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends Lee_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,4 +22,17 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+
+    public function smarty()
+    {
+        // 根据环境，决定是否显示 CI 版本信息
+        $ci_version = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '';
+
+        $this->assign('ci_version', $ci_version);
+        $this->assign('data', array(
+            'title' => 'Welcome to CodeIgniter',
+            'h1' => 'Welcome to CodeIgniter - Smarty !'
+        ));
+        $this->display('welcome_message');
+    }
 }

@@ -15,4 +15,12 @@ class Lee_Controller extends CI_Controller {
         $em = $this->doctrine->em;
         $this->em = $em;
     }
+
+    public function assign($tpl_var, $value = NULL, $nocache = FALSE) {
+        $this->smartytpl->assign($tpl_var, $value, $nocache);
+    }
+
+    public function display($template) {
+        $this->smartytpl->display($template);
+    }
 }

@@ -15,7 +15,16 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 # ci-phpunit-test
 #-------------------------
-application/tests/build
+application/tests/build/
+
+# Smarty
+#-------------------------
+public/smarty/cache/*
+public/smarty/configs/*
+public/smarty/templates_compile/*
+!public/smarty/cache/.gitkeep
+!public/smarty/configs/.gitkeep
+!public/smarty/templates_compile/.gitkeep
 
 # IDE Files
 #-------------------------
