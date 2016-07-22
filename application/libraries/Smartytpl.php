@@ -19,6 +19,7 @@ class Smartytpl extends Smarty {
         $this->cache_dir      = $this->CI->config->item('cache_dir');
         $this->config_dir     = $this->CI->config->item('config_dir');
         $this->template_ext   = $this->CI->config->item('template_ext');
+        $this->plugins_dir    = $this->CI->config->item('plugins_dir');
 
         if(function_exists('site_url')) {
             $this->assign('site_url', site_url());
