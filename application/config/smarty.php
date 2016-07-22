@@ -6,4 +6,4 @@ $config['template_dir'] = APPPATH . 'views';
 $config['compile_dir'] = './smarty/templates_compile';
 $config['cache_dir'] = './smarty/cache';
 $config['config_dir'] = array('./smarty/configs');
-$config['template_ext'] = '.tpl.html';
+$config['template_ext'] = '.tpl';
