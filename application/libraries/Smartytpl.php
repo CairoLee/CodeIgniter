@@ -19,11 +19,8 @@ class Smartytpl extends Smarty {
         $this->cache_dir      = $this->CI->config->item('cache_dir');
         $this->config_dir     = $this->CI->config->item('config_dir');
         $this->template_ext   = $this->CI->config->item('template_ext');
-        $this->plugins_dir    = $this->CI->config->item('plugins_dir');
 
-        if(function_exists('site_url')) {
-            $this->assign('site_url', site_url());
-        }
+        $this->addPluginsDir($this->CI->config->item('plugins_dir'));
 
         $this->assign('elapsed_time', $this->CI->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end'));
         $this->assign('memory_usage', ( ! function_exists('memory_get_usage')) ? '0' : round(memory_get_usage() / 1024 / 1024, 2) . 'MB');
