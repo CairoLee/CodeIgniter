@@ -17,6 +17,11 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 #-------------------------
 application/tests/build/
 
+# Doctrine
+#-------------------------
+application/models/Proxies/*
+!application/models/Proxies/.gitkeep
+
 # Smarty
 #-------------------------
 public/smarty/cache/*
