@@ -20,7 +20,13 @@ class Lee_Controller extends CI_Controller {
         $this->smartytpl->assign($tpl_var, $value, $nocache);
     }
 
+    public function clear_assign($tpl_var)
+    {
+        $this->smartytpl->clear_assign($tpl_var);
+    }
+
     public function display($template) {
-        $this->smartytpl->display($template);
+        $output = $this->smartytpl->fetch($template);
+        $this->output->set_output($output);
     }
 }

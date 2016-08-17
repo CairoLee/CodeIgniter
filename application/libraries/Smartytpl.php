@@ -30,4 +30,9 @@ class Smartytpl extends Smarty {
     {
         parent::display($template . $this->template_ext, $cache_id, $compile_id, $parent);
     }
+
+    public function fetch($template = NULL, $cache_id = NULL, $compile_id = NULL, $parent = NULL)
+    {
+        return parent::fetch($template . $this->template_ext, $cache_id, $compile_id, $parent);
+    }
 }
