@@ -22,6 +22,7 @@ class Smartytpl extends Smarty {
 
         $this->addPluginsDir($this->CI->config->item('plugins_dir'));
 
+        $this->assign('ci_env', ENVIRONMENT);
         $this->assign('elapsed_time', $this->CI->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end'));
         $this->assign('memory_usage', ( ! function_exists('memory_get_usage')) ? '0' : round(memory_get_usage() / 1024 / 1024, 2) . 'MB');
     }
